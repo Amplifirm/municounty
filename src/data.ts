@@ -17,7 +17,7 @@ export const PHOTOS = {
   airport:      '/images/exec_page_bg.jpg',
   arts:         '/images/arts_culture.jpg',
   humanSvc:     '/images/human_svc_bg.jpg',
-  danBenson:    '/images/dan-benson.jpg',
+  danBenson:    '/images/exec_benson.jpg',
 };
 
 // Real nav from scraped site

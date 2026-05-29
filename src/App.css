@@ -237,8 +237,8 @@ h4 { font-size: .9rem; font-weight: 700; color: var(--black); margin-bottom: 4px
 .exec-inner {
   display: grid; grid-template-columns: 340px 1fr; gap: 72px; align-items: start;
 }
-.exec-photo { border-radius: var(--r); overflow: hidden; height: 420px; }
-.exec-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.exec-photo { border-radius: var(--r); overflow: hidden; height: 440px; }
+.exec-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 72% center; }
 .exec-text { padding-top: 8px; }
 .exec-text blockquote {
   font-size: clamp(1.2rem, 2.2vw, 1.65rem); font-weight: 500;
