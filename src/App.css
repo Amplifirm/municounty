@@ -73,7 +73,7 @@
 .header-inner {
   display: flex; align-items: center; height: 64px; gap: 0;
 }
-.brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; margin-right: auto; }
+.brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
 .brand-seal {
   width: 40px; height: 40px; border-radius: var(--r);
   background: var(--green); color: rgba(255,255,255,.9);
@@ -84,8 +84,8 @@
 .brand-text { display: flex; flex-direction: column; line-height: 1.2; }
 .brand-name { font-size: .85rem; font-weight: 800; color: var(--black); letter-spacing: .04em; }
 .brand-tag  { font-size: .65rem; color: var(--muted); letter-spacing: .02em; }
-.nav-row { display: flex; }
-.nav { display: flex; }
+.nav-row { flex: 1; display: flex; justify-content: center; }
+.nav { display: flex; gap: 2px; }
 
 /* Nav items */
 .nav-item { position: relative; }
@@ -107,9 +107,12 @@
   box-shadow: var(--sh-lg); padding: 20px; z-index: 400; min-width: 220px;
 }
 .nav-item.open .megamenu { display: flex; gap: 32px; }
-.megamenu.cols-1 { min-width: 220px; }
+.megamenu.cols-1 { min-width: 240px; }
 .megamenu.cols-2 { min-width: 460px; }
-.megamenu.cols-3 { min-width: 680px; }
+.megamenu.cols-3 { min-width: 660px; }
+/* Keep wide/edge menus inside the viewport */
+.nav-item:nth-child(3) .megamenu { left: 50%; transform: translateX(-50%); }
+.nav-item:nth-child(n+4) .megamenu { left: auto; right: 0; }
 .mm-col { flex: 1; min-width: 0; }
 .mm-col h5 { font-size: .7rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
 .mm-head-link { color: inherit; }
@@ -120,7 +123,7 @@
 }
 .mm-sub li a:hover { background: var(--off); color: var(--black); }
 
-.header-right { display: flex; align-items: center; gap: 8px; margin-left: 16px; }
+.header-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
 .icon-btn {
   width: 34px; height: 34px; display: flex; align-items: center; justify-content: center;
   border-radius: var(--r); color: var(--muted); background: none; border: none; cursor: pointer;
